@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product Details</title>
+
+</head>
+<body>
+<h1>{{ product.title }}</h1>
+<h3>ID:{{ product.id }}</h3>
+<h3>Price:{{ product.price }}</h3>
+<h3>Description:{{ product.description }}</h3>
+{#<h3>Statuse:{{ product.is_active }}</h3>#}
+<h3>Statuse:{% if product.is_active %}
+    Avilable
+    {% else %}
+    Unavilable
+    {% endif %}
+</h3>
+</body>
+</html>

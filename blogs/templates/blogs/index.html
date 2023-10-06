@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block page_title %}
+    Website
+{% endblock %}
+
+{% block header_reference %}
+    <link rel="stylesheet" href="{% static 'blogs/index.css' %}">
+{% endblock %}
+
+{% block page_content %}
+{#    Welcome to Django#}
+{#    {{ a }}#}
+    <section id="welcome">
+        <header>
+            <img src="{% static 'blogs/images/ALL.png' %}" alt="programs">
+            <h2>My WebSite</h2>
+        </header>
+        <p>Hello , My name is Khakpoor , I'm a Developer</p>
+    </section>
+
+    <section id="latest-posts">
+        <h2>
+            leastest Posts
+        </h2>
+    {#    <ul>#}
+    {#        <li><a href="*">test</a> </li>#}
+    {#        <li><a href="*">test</a> </li>#}
+    {#        <li><a href="*">test</a> </li>#}
+    {#    </ul>#}
+        <ul>
+            {% for post in leatest_post %}
+                <li>
+                    {% include 'blogs/includes/post.html' %}
+                </li>
+            {% endfor %}
+        </ul>
+
+
+    </section>
+    <section id="about">
+        <h2>Explanations about the site</h2>
+        <p>The site includes the training of the most popular programming language</p>
+        <p>Language is such: Python,Django,PHP,etc.</p>
+    </section>
+{% endblock %}

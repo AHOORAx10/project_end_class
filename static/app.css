@@ -1,0 +1,8 @@
+/*html{margin:0px;}*/
+/*body{background-color:blueviolet;}*/
+
+*{box-sizing: border-box;}
+html{margin: 0px;}
+body{font-family: sans-serif}
+h1,h2,h3{font-family: sans-serif;
+font-weight: bold}
